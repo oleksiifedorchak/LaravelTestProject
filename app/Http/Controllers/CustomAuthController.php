@@ -69,6 +69,8 @@ class CustomAuthController extends Controller
 
         $data['heading_title'] = 'Dashboard countries';
 
+        $data['search'] = $request['search'];
+
         $data['countries'] = isset($request['search']) ?
             DB::table('country')->where('name', 'like', '%'.$request['search'].'%')->get() :
             DB::table('country')->get();

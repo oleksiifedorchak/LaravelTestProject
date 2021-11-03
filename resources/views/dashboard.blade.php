@@ -20,7 +20,7 @@
 <form method="POST" action="{{ route('search') }}">
     @csrf
     <div class="form-group mb-3">
-        <input type="text" placeholder="search" id="search" class="form-control" name="search" autofocus>
+        <input type="text" placeholder="search" id="search" class="form-control" value="{{ $search }}" name="search" autofocus>
     </div>
     <div class="d-grid mx-auto">
         <button type="submit" class="btn btn-dark btn-block">Search</button>
